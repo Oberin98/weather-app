@@ -1,0 +1,19 @@
+<form action="/users/new" method="post" style="width: 40%; margin: 0 auto;" id="regForm">
+  <label for="email">Email address</label>
+  <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+  <small name="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+  <label for="username" style="margin-top: 10px;">Login</label>
+  <input type="text" class="form-control" name="username" placeholder="Login">
+
+  <label for="password" style="margin-top: 10px;">Password</label>
+  <div class="mistake" style="color: red"></div>
+  <input type="password" class="form-control" name="password" placeholder="Password">
+
+  <label for="city" style="margin-top: 10px;">City</label>
+  <input type="text" class="form-control" name="city" placeholder="City">
+
+  <label for="subscribed"> Do you wont toget notification about weather?</label>
+  <input type="checkbox" id="subscribed" name="subscribed">
+  <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+</form>

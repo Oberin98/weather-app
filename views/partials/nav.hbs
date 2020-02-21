@@ -1,0 +1,20 @@
+<ul class="nav justify-content-end" style=" border-bottom: 1px solid black">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Main</a>
+  </li>
+  {{#if user}}
+  <li class="nav-item">
+    <a class="nav-link" href="/users/account">Account</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/users/logout">Log Out</a>
+  </li>
+  {{else}}
+  <li class="nav-item">
+    <a class="nav-link" href="/users/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/users/new">Registration</a>
+  </li>
+  {{/if}}
+</ul>
