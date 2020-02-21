@@ -45,7 +45,7 @@ let template = './email.html';
 // NODEMAILER stuff
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.ru',
+  host: 'smtp.gmail.com',
   port: 465,
   secure: true,
   auth: { // email and password from sender email and password
@@ -61,7 +61,7 @@ const transporter = nodemailer.createTransport({
 async function sendEmail(user) {
   const { email, username, city } = user;
 
-  geocode(city, (err, { latitude, longtitude, location }) => {
+  geocode(city, (err, { latitude, longtitude, location = city }) => {
     if (err) {
       return res.send(err);
     } else {
@@ -73,15 +73,10 @@ async function sendEmail(user) {
             from: `"Weather notification 🌞" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'Weather forecast!',
-            text: 'Информация о записе',
-            template: `
-            <h2>Today's forecast</h2>
-            <h3>Hello ${username}</h3>
-            <p>
-              The temperature in ${city} is {${forecastData.temperature}, <br>
-              and the weather is ${forecastData.weather}
-            </p>
-            `
+            text: 'Weather forecast!', // plain text body
+            html: `<b>Today's forecast</b>
+                                <p>The temperature in ${city} is ${forecastData.temperature}, <br>
+                                   and the summary is ${forecastData.summary}</p>`
           });
         }
       })
