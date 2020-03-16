@@ -1,4 +1,4 @@
-# Weaathe Notification App
+# Weather Notification App
 Solo project in bootcamp
 
 Main idea of the project to allowed users to subscribe to mailing with information and recommendations about wether for current day
