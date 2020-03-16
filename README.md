@@ -5,11 +5,11 @@ Main idea of the project to allowed users to subscribe to mailing with informati
 
 There is mostly backend part of the project
 # Technologies:
-  Node js (express), </br>
-  MongoDB, </br>
-  Nodemailer, </br>
-  Crone, </br>
-  Handlebars, </br>
+  Node js (Express) </br>
+  MongoDB </br>
+  Nodemailer </br>
+  Crone </br>
+  Handlebars </br>
 
 # MVP Functionality
   Login / Register </br>
